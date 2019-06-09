@@ -1,0 +1,22 @@
+.transbox {
+    margin-top: 80px;
+    background-color:black;
+    border-radius: 9px;
+    opacity: 0.8;
+  }
+  .transboxradio {
+    margin-top: 80px;
+    background-color:#494949;
+    border-radius: 9px;
+    opacity: 0.6;
+  }
+  
+div{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 14px;
+    color:gray;
+
+}

@@ -1,0 +1,16 @@
+
+div{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bolder;
+    text-align: justify;
+    line-height: 1.5;
+    font-size: 14px;
+
+}
+
+.transbox {
+    margin-top: 110px;
+    background-color: #ffffff;
+    border-radius: 9px;
+    opacity: 0.85;
+  }

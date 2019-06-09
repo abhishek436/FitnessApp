@@ -1,0 +1,75 @@
+<div>
+            <div class="container-fluid" style="margin:0px" >
+                <div class="row" >
+                       <nav class = "navbar navbar-inverse" style="margin:0px;margin-left:-10px;margin-right:-10px;border-radius:0px; " >
+            <div class = "navbar-header">
+                       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        </button>
+            <a class="navbar-brand" [routerLink]="['/main']"><span class="glyphicon glyphicon-home"></span>&nbsp;&nbsp;FABFIT</a>
+            </div>
+            <div class="collapse navbar-collapse" id="mynav-collapse">
+            <ul class = "nav navbar-nav">
+                    <li><a [routerLink] = "['/home']" *ngIf="this.as.navShow && this.as.navShowadmin && this.as.navTrainershow">Register</a></li>
+                      <li>  <a [routerLink] = "['/admin']" *ngIf="this.as.navShowadmin && this.as.navShow && this.as.navTrainershow">Trainer Login</a>
+                        <a [routerLink] = "['/trainerdetail']" *ngIf="!this.as.navShow && this.as.navShowadmin && this.as.navTrainershow">Trainer</a>
+                      
+                    </li>
+                    
+                    
+                    <li><a [routerLink] = "['/about']" *ngIf="this.as.navShow && this.as.navShowadmin && this.as.navTrainershow">About</a>
+                    <a [routerLink] = "['/addetails']" *ngIf = "!this.as.navShow && this.as.navShowadmin && this.as.navTrainershow">BMI Calculator</a></li>
+                    <li><a [routerLink] = "['/terms']" *ngIf="this.as.navShow && this.as.navShowadmin && this.as.navTrainershow">Terms and Condition</a>
+                        <a [routerLink] = "['/bmi']" *ngIf = "!this.as.navShow && this.as.navShowadmin && this.as.navTrainershow">Preferences</a></li>
+                       <li> <a [routerLink] = "['/fgallery']" *ngIf = "!this.as.navShow && this.as.navShowadmin && this.as.navTrainershow">Workout Guide</a></li>
+
+
+                    <li><a [routerLink] = "['/trainerreg']" *ngIf="this.as.navShow && this.as.navShowadmin && this.as.navTrainershow">Trainer Registration</a>
+                        <a [routerLink] = "['/addtrainer']" *ngIf = "!this.as.navShowadmin">Add Trainer</a>
+                    </li>
+                    <li>
+                        <a [routerLink] = "['/updatediet']" *ngIf = "!this.as.navShowadmin">Diet Plan</a>
+                    </li>
+                    <li>
+                        <a [routerLink] = "['/updatefitness']" *ngIf = "!this.as.navShowadmin">Fitness Plan</a>
+                    </li>
+                    <li>
+                        <a [routerLink] ="['/gettrainerdetail']" *ngIf = "!this.as.navShowadmin">Trainer Details</a>
+                    </li>
+                    <li>
+                            <a [routerLink] = "['/viewreq']" *ngIf = "!this.as.navShowadmin">View Request</a>
+                    </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            <li>
+                <a [routerLink] = "['/adminreg']" *ngIf= "this.as.navShowadmin && this.as.navShow && this.as.navTrainershow"><span class="glyphicon glyphicon-king"></span>&nbsp; Admin Login</a>
+                <a [routerLink]="['/main']" (click)="adminout()" *ngIf="!this.as.navShowadmin" ><span class="glyphicon glyphicon-off"></span> Admin Logout</a>
+                <a [routerLink] = "['/main']" (click)="trainerout()" *ngIf = "!this.as.navTrainershow" ><span class="glyphicon glyphicon-off"></span>&nbsp;Trainer Logout</a>
+            </li>
+
+            <li><a [routerLink]="['/login']" *ngIf="this.as.navShow && this.as.navShowadmin && this.as.navTrainershow"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Already verified? Login Here</a></li>
+              <li> <a [routerLink] = "['/profile']" *ngIf = "!this.as.navShow"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;Profile</a></li>
+                    
+         <li>   <a [routerLink]="['/main']" (click)="logOut()" *ngIf="!this.as.navShow" ><span class="glyphicon glyphicon-off"></span>&nbsp;&nbsp;LogOut</a></li>
+        </ul>
+            </div>
+            </nav>
+                </div>
+                </div>
+                
+                
+            </div>        
+
+                <div class = "container-fluid">
+                                <router-outlet></router-outlet>
+                          </div> <br><br><br><br><br><br>
+      <div class="foot footer navbar-bottom" style="text-align:center">
+            <p> <a [routerLink]="['/about']">About us </a> &emsp;|&emsp;<a [routerLink]="['/']"> Privacy Policy </a>&emsp;|&emsp;<a [routerLink]="['/terms']"> Terms and Conditions </a></p>
+            <p>Copyright issue: Infosys Ltd. &emsp;
+                    Get in touch -  <a href="mailto:someone@example.com?subject=Remove the items&body=this is ur mail id and password ">admin@fabfit.com</a></p>
+            </div>
+
+
+      

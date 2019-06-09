@@ -1,0 +1,75 @@
+
+<div class="container-fluid full ">
+  <div class=" col-md-5 col-md-offset-3 col-sm-4 col-sm-offset-2 col-xs-12 col-xs-offset-0 " >
+      <h3 style="text-align:center">UPDATE DIET SHEET</h3><br>
+<form [formGroup]="dietUpdateForm">
+  <Label>Gender:</Label>
+<select class="form-control" formControlName="gender">
+
+  <option value="" selected disabled hidden>Select</option>
+  <option>Male</option>
+<option>Female</option>
+</select> <br>
+<Label>Goals:</Label>
+<select class="form-control" formControlName="goals">
+  <option value="" selected disabled hidden>Select</option>
+  <option>Burn Fat</option>
+  <option>Gain Muscle</option>
+  <option>Regular Workout</option>
+  </select> <br>
+  <Label>Level:</Label>
+  <select class="form-control" formControlName="level1">
+    <option value="" selected disabled hidden>Select</option>
+    <option>Beginner</option>
+      <option>Intermediate</option>
+      <option>Professional</option>
+      </select> <br>
+      <Label>DIET COLUMN:</Label>
+  <select class="form-control" formControlName="updateColumns">
+    <option value="" selected disabled hidden>Select</option>
+    <option>Fruits</option>
+      <option>Vegetables</option>
+      <option>Grains</option>
+      <option>Proteins</option>
+      <option>Dairy</option>
+  
+      <option>Breakfast</option>
+      <option>Mid Morning Snack</option>
+      <option>Lunch</option>
+      <option>Mid Evening Snack</option>
+      <option>Dinner</option>
+
+
+
+      </select> <br>
+      <Label>TOTAL CALORIES TO BE CONSUMED:</Label>
+      <input class="form-control" formControlName="calories">
+      <br>
+      <Label>ENTER DIET PLAN:</Label> 
+   
+  <textarea rows="5" cols="50" name="Updated" class="form-control" formControlName="updateValue"></textarea>
+  <br>
+<button type="submit" style="align-content: center"class="btn btn-primary "(click)="updatediet()">UPDATE DIET</button>
+<button type="submit" (click)="fetchdiet()"style="align-content: center"class="btn btn-primary">FETCH DIET</button>
+</form>
+
+
+</div>
+</div>
+  
+<div *ngIf="errormessage!=null">
+    <span style="font-weight:bolder"class="text-danger">{{errormessage}}</span>
+  </div>
+  <div *ngIf="success!=null">
+    <span  class="text-success">{{success}}</span>
+<!-- <div *ngIf="flag">
+<div *ngFor="let i of dietdetails">
+  {{i.fruits}}
+<br>
+{{i.vegetables}}
+<br>
+{{i.grains}}
+
+</div>
+</div> -->
+</div>

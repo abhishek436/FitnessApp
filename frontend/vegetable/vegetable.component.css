@@ -1,0 +1,25 @@
+.header{
+  background: url("/assets/veg header 2 cropped.jpg") no-repeat;
+  background-size: 100%;
+  width:106%;
+  margin-left: -40px;
+  background-attachment: fixed;
+  color : black;
+}
+
+
+.container-fluid
+{
+  background-color:rgba(197, 186, 186, 0.644);
+  color:rgb(15, 14, 14);
+}
+.theade
+{
+  background-color: rgba(75, 238, 0, 0.438);
+}
+.text
+{
+  /* background-color:lightcoral; */
+  font-size:16px;
+}
+

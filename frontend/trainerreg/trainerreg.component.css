@@ -1,0 +1,16 @@
+.header
+{
+    /* background-color:rgb(255, 102, 0) */
+}
+.container-fluid{
+    /* background: url("/assets/Mid back.jpg") no-repeat; */
+    background-size: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    width:100%;
+    margin-left:0px;
+    margin-right:00px;
+    background-attachment: fixed;
+    color : whitesmoke;
+    font-size:18px;
+  }
+  

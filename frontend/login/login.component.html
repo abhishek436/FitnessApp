@@ -1,0 +1,40 @@
+
+<html>
+  <body>
+    <div class = "row">
+          <div class="transbox col-md-4 col-md-offset-4 col-sm-4 col-sm-offset-2 col-xs-12 col-xs-offset-0" >
+            <form [formGroup]="verifyform"  (ngSubmit)="verifydetails()" >
+              <div class = "form-group">
+              <h3 style="text-align:center">Login</h3><br>
+              Email <input type = "text" name = "email" placeholder="Email"class = "form-control" formControlName="email">
+              <span class="text-danger" *ngIf="!verifyform.controls.email.valid && verifyform.controls.email.dirty">Enter a valid username</span> 
+            
+            </div> <br>
+            <div class = "form-group">
+              Password <input type = "password" name = "password" placeholder="Password"class = "form-control" formControlName="password"><br>
+              <span class="text-danger" *ngIf="!verifyform.controls.password.valid && verifyform.controls.password.dirty">Enter a valid password</span> <br>
+
+              
+            
+            </div><br>
+            
+            <div class = "form-group">
+              <button type = "submit" class = "btn btn-primary"   [disabled]="!verifyform.valid" >Log In</button>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;
+              <a [routerLink] = "['/home']">Register here</a>
+            </div><br>
+            </form>
+
+            
+<div *ngIf="errormessage!=null">
+  <span style="font-weight:bolder"class="text-danger">{{errormessage}}</span>
+</div>
+<div *ngIf="successmessage!=null">
+  <span  class="text-success">{{successmessage}}</span>
+  
+</div>                                    
+</div>
+</div>
+</body>
+</html>

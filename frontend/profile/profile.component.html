@@ -1,0 +1,230 @@
+<!-- <div style="color:bisque" class="container">
+    <h1>Edit Profile</h1>
+    <hr>
+  <div class="row">
+      left column
+      <div class="col-md-3">
+        <div class="text-center">
+          <img src="//placehold.it/100" class="avatar img-circle" alt="avatar">
+          <h6>Upload a different photo...</h6>
+          
+          <input type="file" class="form-control">
+        </div>
+      </div>
+      
+      edit form column
+      <div class="col-md-9 personal-info">
+        
+        <h3>Personal info</h3>
+        
+        <form [formGroup] = "updateForm" (ngSubmit) = "updatedetails()">
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Name:</label>
+            <div class="col-lg-8">
+              <input class="form-control" type="text"  formControlName ="name">
+              <span class="text-danger" *ngIf="!updateForm.controls.name.valid && updateForm.controls.name.dirty">Name is required</span> <br>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-lg-3 control-label">Height:</label>
+            <div class="col-lg-8">
+              <input class="form-control"  type="text" formControlName = "height">
+              <span class="text-danger" *ngIf="!updateForm.controls.height.valid && updateForm.controls.height.dirty">Enter a value in range 130-250</span> <br>
+            </div>
+          </div>
+          <div class="form-group">
+              <label class="col-lg-3 control-label">Email:</label>
+              <div class="col-lg-8">
+                <input class="form-control" disabled = "true"  type="text" formControlName = "email">
+               <br>
+              </div>
+            </div>
+            <div class="form-group">
+                <label class="col-lg-3 control-label">Contact:</label>
+                <div class="col-lg-8">
+                  <input class="form-control"   type="text" formControlName = "contact">
+                  <span class="text-danger" *ngIf="!updateForm.controls.contact.valid && updateForm.controls.contact.dirty">Please enter a valid mobile no</span> <br>
+                          
+                </div>
+              </div>
+              <div class="form-group">
+                  <label class="col-lg-3 control-label">Weight:</label>
+                  <div class="col-lg-8">
+                    <input class="form-control"   type="text" formControlName = "weight">
+                    <span class="text-danger" *ngIf="!updateForm.controls.weight.valid && updateForm.controls.weight.dirty">Enter a value in range 10-200</span> <br>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-3 control-label">Trainer ID:</label>
+                  <div class="col-lg-8">
+                    <input class="form-control"   type="text" formControlName = "temail"><br>
+                  </div>
+                </div>
+         
+      
+          <div class="form-group">
+            <label class="col-md-3 control-label">Password:</label>
+            <div class="col-md-8">
+              <input class="form-control" #x type="password"  formControlName = "password">
+              <span class="text-danger" *ngIf="!updateForm.controls.password.valid && updateForm.controls.password.dirty">Please enter a valid password </span> <br>
+              <br><input type="checkbox" (click)="x.type=x.type=='password'?'text':'password'">Show Password 
+
+              
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label"></label>
+            <div class="col-md-8">
+              <button type="submit" class="btn btn-primary">Save Changes</button>&nbsp;&nbsp;
+             
+              
+            </div>
+          </div>
+        </form>
+        
+      </div>
+  </div>
+  <div *ngIf="errormessage!=null">
+    <span style="font-weight:bolder"class="text-danger">{{errormessage}}</span>
+  </div>
+  <div *ngIf="successmessage!=null">
+    <span  class="text-success">{{successmessage}}</span>
+    
+  </div> 
+  </div><br><br><br><br><br><br>
+   -->
+
+
+
+   <div class="container emp-profile">
+      <form method="post">
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="profile-img">
+                      <img src="assets/hii.png" alt=""/>
+                  </div>
+              </div>
+              <div class="col-md-6">
+                  <div class="profile-head">
+                              <h1>
+                                  {{this.name}}
+                              </h1><hr/>
+                              <h4>
+                                  FabFit User
+                              </h4>
+                              
+                      <ul class="nav nav-tabs" id="myTab" role="tablist">
+                          <li class="nav-item">
+                              <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Edit Profile</a>
+                          </li>
+                          
+                      </ul>
+                  </div>
+              </div>
+
+              <div class="col-md-2">
+                  
+                  <!-- <input type="radio" name = "status"  (click) = "toggle()" class="profile-edit-btn"   name="btnAddMore" value="Edit Profile"/> -->
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-md-4">
+                  <div class="profile-work">
+                      <p>QUICK LINKS</p>
+                      <hr>
+                      <a [routerLink] = "['/main']">Home</a><br/><br>
+                      <a [routerLink] = "['/trainerdetail']">Trainer</a><br/><br>
+                      <a [routerLink] = "['/addetails']">Bmi Calculator</a><br/><br>
+                      <a [routerLink] = "['/bmi']">Preferences</a><br/><br>
+                    
+                  </div>
+              </div>
+              
+              <div class="col-md-8">
+                  <div class="tab-content profile-tab" id="myTabContent">
+                      <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                          <form [formGroup] = "updateForm" (ngSubmit) = "updatedetails()">
+                              <div class="form-group">
+                                  <label class="col-lg-3 control-label">Name:</label>
+                                  <div class="col-lg-8">
+                                
+                                    <input class="form-control" type="text"   formControlName ="name">
+                                    <span class="text-danger" *ngIf="!updateForm.controls.name.valid && updateForm.controls.name.dirty">Name is required</span> <br>
+                                  </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Email:</label>
+                                    <div class="col-lg-8">
+                                      <input class="form-control" disabled = "true"  type="text" formControlName = "email">
+                                     <br>
+                                    </div>
+                                  </div>
+                                <div class="form-group">
+                                    <label class="col-lg-3 control-label">Height:</label>
+                                    <div class="col-lg-8">
+                                      <input class="form-control"  type="text" formControlName = "height">
+                                      <span class="text-danger" *ngIf="!updateForm.controls.height.valid && updateForm.controls.height.dirty">Enter a value in range 130-250</span> <br>
+                                    </div>
+                                  </div>
+                                 
+                                    <div class="form-group">
+                                          <label class="col-lg-3 control-label">Contact:</label>
+                                          <div class="col-lg-8">
+                                            <input class="form-control"   type="text" formControlName = "contact">
+                                            <span class="text-danger" *ngIf="!updateForm.controls.contact.valid && updateForm.controls.contact.dirty">Please enter a valid mobile no</span> <br>
+                                                    
+                                          </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-lg-3 control-label">Weight:</label>
+                                            <div class="col-lg-8">
+                                              <input class="form-control"   type="text" formControlName = "weight">
+                                              <span class="text-danger" *ngIf="!updateForm.controls.weight.valid && updateForm.controls.weight.dirty">Enter a value in range 10-200</span> <br>
+                                            </div>
+                                          </div>
+                                          <div class="form-group">
+                                            <label class="col-lg-3 control-label">Trainer ID:</label>
+                                            <div class="col-lg-8">
+                                              <input class="form-control"   disabled = "true" type="text" formControlName = "temail"><br>
+                                            </div>
+                                          </div>
+                                  
+                                          <div class="form-group">
+                                              <label class="col-md-3 control-label">Password:</label>
+                                              <div class="col-md-8">
+                                                <input class="form-control" #x type="password"  formControlName = "password">
+                                                <span class="text-danger" *ngIf="!updateForm.controls.password.valid && updateForm.controls.password.dirty">Please enter a valid password </span> <br>
+                                                <br><input type="checkbox" (click)="x.type=x.type=='password'?'text':'password'">Show Password 
+                                  
+                                                
+                                              </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-md-3 control-label"></label>
+                                                <div class="col-md-8">
+                                                  <button type="submit" class="btn btn-primary">Save Changes</button>&nbsp;&nbsp;
+                                                 
+                                                  
+                                                </div>
+                                              </div>
+                                 
+                            
+                                </form>
+
+                                
+                      </div>
+                  </div>
+                 
+           
+          </div>
+          <div style="text-align: center" *ngIf="errormessage!=null">
+              <span style="font-weight:bolder"class="text-danger">{{errormessage}}</span>
+            </div>
+            <div style="text-align: center" *ngIf="successmessage!=null">
+              <span  class="text-success">{{successmessage}}</span>
+              
+            </div> 
+      </div>
+      </form>           
+  </div>

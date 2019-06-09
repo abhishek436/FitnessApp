@@ -1,0 +1,305 @@
+<!-- <nav class="navbar navbar-inverse" *ngIf="flag">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li>
+          <button type="submit" class="btn btn-primary" (click)="ngOnInit()">Back button></button>
+          <button type="submit" class="btn btn-primary"(click)="getDiet()">Back</button></li>
+        <li><a href="#">Page 1</a></li>
+      </ul>
+    </div>
+  </nav> -->
+  <!-- <br><br><br>
+  <div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1 col-sm-4 col-sm-offset-2 col-xs-12 col-xs-offset-0" >
+  
+<form [formGroup]="dietForm" (ngSubmit)="getDiet()" *ngIf="!flag">
+    <Label>Select your Gender:</Label>
+<select class="form-control" formControlName="gender">
+  
+<option value="" selected disabled hidden>Select</option>
+<option>Male</option>
+<option>Female</option>
+</select> <br>
+<Label>Select your Goal:</Label>
+<select class="form-control" formControlName="goals">
+    <option value="" selected disabled hidden>Select</option>
+    <option>Burn Fat</option>
+    <option>Gain Muscle</option>
+    <option>Regular Workout</option>
+    </select> <br>
+    <Label>Select your Difficulty level:</Label>
+    <select class="form-control" formControlName="level1">
+        <option value="" selected disabled hidden>Select</option>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Professional</option>
+        </select> <br>
+<button type="submit" style="align-content: center"class="btn btn-default btn-lg btnclass">Get Diet</button>
+</form>
+</div>
+</div>
+<div *ngIf="flag2">
+    <h2> YOUR DIET PLAN</h2>
+    <h4>Below are the daily recommended amounts for each food group based on your selections.</h4><br>
+
+  <div *ngFor="let i of dietdetails">
+      <div class="container-fluid diet">
+          <div class=" col-md-5 col-md-offset-3 col-sm-4 col-sm-offset-2 col-xs-12 col-xs-offset-0" >
+        
+        <table class="table table-condensed table-responsive table-bordered tableclass">
+        <tr><td>Total Calories to be consumed</td><td>{{i.calories}}</td></tr>
+        <tr><td>Fruits</td><td>{{i.fruits}}</td></tr>
+        <tr><td>Vegetables</td><td>{{i.vegetables}}</td></tr>
+        <tr><td>Grains</td><td>{{i.grains}}</td></tr>
+        </table>
+        </div>
+      </div>
+  <button type="submit" class="btn btn-primary" (click)="ngOnInit()">Back button</button>
+  <button type="submit" class="btn btn-primary" (click)="getFit()">Get Fit</button>
+    </div>
+</div>
+<div *ngIf="flag1">
+  Hello
+  <button type="submit" class="btn btn-primary"(click)="getDiet()">Back</button>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br> -->
+
+<!-- <button type="submit" class="btn btn-primary" [routerLink]="['/dietm1/fruit']"> GO CHECK FRUIT! </button> -->
+
+
+
+                                            <!-- KIRAN -->
+
+
+                                            <html>
+<!-- <nav class="navbar navbar-inverse" *ngIf="flag">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">WebSiteName</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li>
+          <button type="submit" class="btn btn-primary" (click)="ngOnInit()">Back button></button>
+          <button type="submit" class="btn btn-primary"(click)="getDiet()">Back</button></li>
+        <li><a href="#">Page 1</a></li>
+      </ul>
+    </div>
+  </nav> -->
+<body>
+    <div _ngcontent-c3="" class="header">
+        <br _ngcontent-c3=""><br _ngcontent-c3=""><br _ngcontent-c3="">
+          <!-- <h1 _ngcontent-c3="" class=" text-success text-center" style="color: maroon"> DIET PLANS </h1> -->
+          <br _ngcontent-c3=""><br _ngcontent-c3=""><br _ngcontent-c3="">
+          <br><br><br><br><br>
+    
+        </div>
+        <br><br>
+  <div class="container-fluid">
+    
+  <div class=" col-md-5 col-md-offset-1 col-sm-4 col-sm-offset-2 col-xs-12 col-xs-offset-0 full" >
+      <h2 *ngIf="!flag" style="text-align:center">CHOOSE YOUR PREFERENCE</h2><br>
+
+<form [formGroup]="dietForm"*ngIf="!flag">
+    <Label>Select your Gender:</Label>
+<select class="form-control" formControlName="gender">
+  
+<option value="" selected disabled hidden>Select</option>
+<option>Male</option>
+<option>Female</option>
+</select> <br>
+<Label>Select your Goal:</Label>
+<select class="form-control" formControlName="goals">
+    <option value="" selected disabled hidden>Select</option>
+    <option>Burn Fat</option>
+    <option>Gain Muscle</option>
+    <option>Regular Workout</option>
+    </select> <br>
+    <Label>Select your Difficulty level:</Label>
+    <select class="form-control" formControlName="level1">
+        <option value="" selected disabled hidden>Select</option>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Professional</option>
+        </select> <br>
+        <button type="submit" (click)="getDiet()" style="align-content: center"class="btn btn-default btn-lg btnclass" [disabled]="!dietForm.valid">GET DIET</button>
+          <button type="submit" class="btn btn-default btn-lg btnclass" (click)="getfit1()">GET FIT</button>
+      </form>
+
+  </div>
+  
+      <div *ngIf="!flag" class="col-md-4 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-12 col-xs-offset-0 divdiet" > 
+        <h2 style="color:blanchedalmond;text-align:center">STANDARD DIET CHARTS</h2><br>
+        <h3 style="color:whitesmoke;line-height:200%;">We provide you with a standard diet sheet that contains a list of various dietary foods with its nutritional values. Get to know the calorical values of each food component you consume.</h3><br>
+        <h5 style="text-align:center">Click here to know more</h5> 
+        <div class="text-center">
+        <button type="submit" class="btn btn-primary" [routerLink]="['/dietchart']"> Diet Sheet </button>
+      </div>
+      </div><br>
+      
+</div>
+
+
+
+<div *ngIf="flag2">
+    <button type="submit" class="btn btn-primary btn-md backbutton" (click)="ngOnInit()">Back</button>
+
+    <h1 style="text-align:center"> YOUR DIET PLAN</h1>
+    <h4>Below are the daily recommended amounts for each food group based on your selections.</h4><br>
+
+  <div *ngFor="let i of dietdetails">
+      <div class="container-fluid diet">
+          <div class=" col-md-8 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-12 col-xs-offset-0" >
+        
+        <table class="table table-bordered table-responsive tableclass">
+        <tr><td>Calories</td><td>{{i.calories}}</td></tr>
+        <tr><td>Fruits</td><td>{{i.fruits}}</td></tr>
+        <tr><td>Vegetables</td><td>{{i.vegetables}}</td></tr>
+        <tr><td>Proteins</td><td>{{i.protein}}</td></tr>
+        <tr><td>Grains</td><td>{{i.grains}}</td></tr>
+        <tr><td>Dairy</td><td>{{i.dairy}}</td></tr>
+        </table>
+        <br>
+        <h1 style="text-align:center">YOUR CUSTOMIZED DIET PLAN</h1>
+        <br>
+        <table class="table table-bordered table-responsive tableclass">
+        <tr><td>Breakfast</td><td>{{i.breakfast}}</td></tr>
+        <tr><td>Mid-Morning Snacks</td><td>{{i.midMsnack}}</td></tr>
+        <tr><td>Lunch</td><td>{{i.lunch}}</td></tr>
+        <tr><td>Mid-Evening Snacks</td><td>{{i.midEsnack}}</td></tr>
+        <tr><td>Dinner</td><td>{{i.dinner}}</td></tr>
+
+        </table>
+        </div>
+      </div>
+      <hr>
+      <br>
+
+      <div class="container-fluid"> 
+        <div class=" col-md-12 col-md-offset-0 col-sm-4 col-sm-offset-2 col-xs-12 col-xs-offset-0 divdiet" >
+          <br><h1 style="color:azure;text-align:center">WORKOUT ROUTINES</h1> <br>
+            <h2 style="color:azure;text-align:center">We have designed a fitness routine for your chosen preferences.</h2>
+            <br>
+            <h4 style="text-align:center">Click below to check your workout routine</h4> 
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary" (click)="getfit()">GET FIT</button>
+            </div> <br>
+        </div>
+      </div>
+        
+    </div>
+<br><hr>
+    <div class="container-fluid divdiet" *ngIf="suggestions1">
+        <div >
+            <!-- <h1 style="text-align:center"> Trainer's Suggestion </h1> -->
+            <h2 style="text-align:center">TRAINER's SUGGESTION</h2> <hr>
+            <h4 style="color:azure;text-align:center">{{suggestions1}}</h4>
+            
+        </div>
+    </div>
+  
+    <div *ngIf="!suggestions1"><span></span></div>
+</div>
+<div *ngIf="flag1">
+  
+
+  <div class="container-fluid">
+      <button type="submit" class="btn btn-primary btn-md backbutton"(click)="getDiet()">Back</button>
+
+      <h1 style="text-align:center"> YOUR WORKOUT ROUTINE </h1>
+    <h4>We advice you to follow the day-wise workout routine populated below based on your preferences</h4><br>
+
+  <div *ngFor="let i of fitnessdetails">
+    <div class="container-fluid diet">
+        <div class=" col-md-6 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-12 col-xs-offset-0" >
+      <h3 style="text-align:center">Workout - DAY 1</h3>
+      <table class="table table-bordered table-responsive tableclass1">
+      <tr><td>DAY 1</td><td>{{i.day1}}</td></tr></table>
+      <h3 style="text-align:center">Workout - DAY 2</h3>
+      <table class="table table-bordered table-responsive tableclass1">
+      <tr><td>DAY 2</td><td>{{i.day2}}</td></tr></table>
+      <h3 style="text-align:center">Workout - DAY 3</h3>
+      <table class="table table-bordered table-responsive tableclass1">
+      <tr><td>DAY 3</td><td>{{i.day3}}</td></tr></table>
+      <h3 style="text-align:center">Workout - DAY 4</h3>
+      <table class="table table-bordered table-responsive tableclass1">
+      <tr><td>DAY 4</td><td>{{i.day4}}</td></tr></table>
+      <h3 style="text-align:center">Workout - DAY 5</h3>
+      <table class="table table-bordered table-responsive tableclass1">
+      <tr><td>DAY 5</td><td>{{i.day5}}</td></tr></table>
+      <h3 style="text-align:center">Workout - DAY 6</h3>
+      <table class="table table-bordered table-responsive tableclass1">
+      <tr><td>DAY 6</td><td>{{i.day6}}</td></tr></table>
+      <h3 style="text-align:center">Workout - DAY 7</h3>
+      <table class="table table-bordered table-responsive tableclass1">
+      <tr><td>DAY 7</td><td>{{i.day7}}</td></tr></table>   
+      </div>
+    </div>
+    </div>
+</div> <br> <hr>
+<div class="container-fluid divdiet" *ngIf="suggestions1">
+    <div >
+        <!-- <h1 style="text-align:center"> Trainer's Suggestion </h1> -->
+        <h2 style="text-align:center">TRAINER's SUGGESTION</h2> <hr>
+        <h4 style="color:azure;text-align:center">{{suggestions1}}</h4>
+        
+    </div>
+</div>
+
+<div *ngIf="!suggestions1"><span></span></div>
+  </div>
+
+  <div *ngIf="flag3">
+  
+
+    <div class="container-fluid">
+        <button type="submit" class="btn btn-primary btn-md backbutton"(click)="ngOnInit()">Back</button>
+  
+        <h1 style="text-align:center"> YOUR WORKOUT ROUTINE </h1>
+      <h4>We advice you to follow the day-wise workout routine populated below based on your preferences</h4><br>
+  
+    <div *ngFor="let i of fitnessdetails">
+      <div class="container-fluid diet">
+          <div class=" col-md-6 col-md-offset-2 col-sm-4 col-sm-offset-2 col-xs-12 col-xs-offset-0" >
+        <h3 style="text-align:center">Workout - DAY 1</h3>
+        <table class="table table-bordered table-responsive tableclass1">
+        <tr><td>DAY 1</td><td>{{i.day1}}</td></tr></table>
+        <h3 style="text-align:center">Workout - DAY 2</h3>
+        <table class="table table-bordered table-responsive tableclass1">
+        <tr><td>DAY 2</td><td>{{i.day2}}</td></tr></table>
+        <h3 style="text-align:center">Workout - DAY 3</h3>
+        <table class="table table-bordered table-responsive tableclass1">
+        <tr><td>DAY 3</td><td>{{i.day3}}</td></tr></table>
+        <h3 style="text-align:center">Workout - DAY 4</h3>
+        <table class="table table-bordered table-responsive tableclass1">
+        <tr><td>DAY 4</td><td>{{i.day4}}</td></tr></table>
+        <h3 style="text-align:center">Workout - DAY 5</h3>
+        <table class="table table-bordered table-responsive tableclass1">
+        <tr><td>DAY 5</td><td>{{i.day5}}</td></tr></table>
+        <h3 style="text-align:center">Workout - DAY 6</h3>
+        <table class="table table-bordered table-responsive tableclass1">
+        <tr><td>DAY 6</td><td>{{i.day6}}</td></tr></table>
+        <h3 style="text-align:center">Workout - DAY 7</h3>
+        <table class="table table-bordered table-responsive tableclass1">
+        <tr><td>DAY 7</td><td>{{i.day7}}</td></tr></table>   
+        </div>
+      </div>
+      </div>
+  </div> <br> <hr>
+  <div class="container-fluid divdiet" *ngIf="suggestions1">
+      <div >
+          <!-- <h1 style="text-align:center"> Trainer's Suggestion </h1> -->
+          <h2 style="text-align:center">TRAINER's SUGGESTION</h2> <hr>
+          <h4 style="color:azure;text-align:center">{{suggestions1}}</h4>
+          
+      </div>
+  </div>
+  
+  <div *ngIf="!suggestions1"><span></span></div>
+    </div>
+  
+</body>
+</html>

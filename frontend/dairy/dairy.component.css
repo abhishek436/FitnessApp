@@ -1,0 +1,23 @@
+.header{
+  background: url("/assets/dairy header cropped.jpg") no-repeat;
+  background-size: 100%;
+  width:106%;
+  margin-left: -40px;
+  background-attachment: fixed;
+  color : black;
+}
+
+
+.container-fluid
+{
+  background-color:rgba(197, 186, 186, 0.644);
+  color:rgb(15, 14, 14);
+}
+.theade
+{
+  background-color:lightblue;
+}
+.text
+{
+  font-size:16px;
+}

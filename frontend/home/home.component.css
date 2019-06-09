@@ -1,0 +1,24 @@
+div{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bold;
+  text-align: justify;
+  line-height: 1.7;
+  font-size: 15px;
+  
+}
+
+.transbox {
+  margin: 90px;
+  margin-top: 25px;
+  background-color: #ffffff;
+  border-radius: 9px;
+  opacity: 0.8;
+}
+
+.header{
+  background: url("./head2.jpg") no-repeat;
+  background-size: contain;
+  width: 106%;
+  margin-left: -40px;
+  background-attachment: fixed;
+}

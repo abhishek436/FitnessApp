@@ -1,0 +1,181 @@
+
+.flip-box {
+  background-color: transparent;
+  width: 400px;
+  height: 500px;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px;
+  
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateX(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+}
+
+.flip-box-front {
+  background-color: rgb(54, 148, 148);
+  color: black;
+  font-family: cursive;
+}
+
+.flip-box-back {
+  background-color:rgb(0, 0, 0);
+  color: white;
+  font-family: cursive;
+  transform: rotateX(180deg);
+}
+
+
+
+h1 {
+  font-family: "black hand"
+}
+.card {
+box-shadow: 0 8px 16px 0 black;
+background-color:white;
+/* max-width: 200px; */
+
+text-align: center;
+font-family: arial;
+transition: 0.16s;
+
+}
+.hello {
+margin-top: -20px;
+
+}
+.price {
+color: grey;
+font-size: 22px;
+}
+
+.card button {
+border: none;
+outline: 0;
+padding: 12px;
+color: white;
+background-color: #000;
+text-align: center;
+cursor: pointer;
+width: 100%;
+font-size: 18px;
+}
+
+.card button:hover {
+opacity: 0.8;
+}
+
+
+
+
+
+.flip-card {
+background-color: transparent;
+width: 300px;
+height: 300px;
+perspective: 1000px;
+}
+
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+text-align: center;
+transition: transform 0.6s;
+transform-style: preserve-3d;
+box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+backface-visibility: hidden;
+}
+
+.flip-card-front {
+background-color: #bbb;
+color: black;
+z-index: 2;
+}
+
+.flip-card-back {
+background-color: white;
+color: white;
+transform: rotateY(180deg);
+z-index: 1;
+}
+p {
+color: black;
+/* padding-left: 30px;
+padding-right: 30px; */
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.newdiv
+{
+padding-left: 335px;
+font-family:Georgia, 'Times New Roman', Times, serif;
+font-size: 24px;
+/* color:rgb(192, 192, 192); */
+line-height: 2.3;
+color:white;
+
+
+}
+
+.transbox {
+  margin: 90px;
+  margin-left:-10px;
+  margin-right:-10px;
+  margin-top: 0px;
+  background-color: grey;
+  border-radius: 9px;
+  opacity: 0.8;
+}
+
+.divdiet{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: justify;
+  line-height: 100%;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 1em;
+  background-image: url("head.jpg") ;
+  background-repeat: no-repeat;
+  background-size: 30%;
+
+}
+
+.divdiet1{
+font-family: Georgia, 'Times New Roman', Times, serif;
+text-align: justify;
+line-height: 100%;
+font-size: 30px;
+background-color: rgba(0, 0, 0, 0.6);
+border-radius: 1em;
+background-image: url("trainer.jpg") ;
+background-repeat: no-repeat;
+background-size: 30%;
+}

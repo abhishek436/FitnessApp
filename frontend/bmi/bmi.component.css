@@ -1,0 +1,89 @@
+h2{
+    color:rgba(245, 245, 245, 0.877);
+    text-align:center;
+}
+h4{
+    color:rgba(245, 245, 245, 0.877);
+    text-align:center;
+}
+
+div{
+    color:white;
+    font-size: 17px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.btnclass{
+    background-color:black;
+    color:white;
+}
+.tableclass{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    background-color: rgb(12, 12, 12,0.8);
+    border:3px solid whitesmoke;
+    border-collapse: collapse;
+
+}
+
+.divdiet{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    line-height: 150%;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1em;
+
+}
+.vertical { 
+    border-left: 6px solid black; 
+    height: 200px; 
+    position:absolute; 
+    left: 50%; 
+}
+.full{
+    height: 100%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+html,body{
+    height:100%;
+}
+.header{
+    background: url("/assets/new header.png") no-repeat;
+    background-size: 100%;
+    width:106%;
+    margin-left: -40px;
+    background-attachment: fixed;
+    color : black;
+  }
+
+  .transbox
+{
+     background-color:rgba(248, 244, 244, 0.3); 
+     margin-left: 70px;
+}
+.backbutton{
+    background-color:black;
+    color:white;
+}
+.tableclass1{
+    text-align: center;
+    font-family: Courier New, Courier, monospace, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 140%;
+    background-color: rgb(12, 12, 12,0.6);
+    border:3px solid whitesmoke;
+    border-collapse: collapse;
+
+}
+.divdiet1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: justify;
+    line-height: 100%;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1em;
+
+}

@@ -1,0 +1,72 @@
+<div class="col-md-3 col-md-offset-2">
+
+   
+  </div>
+
+  <html>
+  <head>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  </head>
+  <body>
+    
+ 
+<h3 style="text-align: center; color:aliceblue">
+  AVAILABLE TRAINERS  
+</h3>
+
+<div  *ngFor = "let re of req1">
+            <div class="container col-md-6 col-md-offset-3 ">    
+                  <div class="row">
+                      <div class="panel panel-default">
+                        
+                      <div class="panel-heading">  <h4 >Trainer Profile</h4></div>
+
+                       <div class="panel-body">
+                      <div class="col-md-4 col-xs-12 col-sm-6 col-lg-4">
+                       <img alt="User Pic" src="./assets/hii.png" id="profile-image1" class="img-circle img-responsive"> 
+                     
+                 
+                      </div>
+                      <div class="col-md-8 col-xs-12 col-sm-6 col-lg-8" >
+                          <div class="container" >
+                            <h2>  {{re.reqId}}  <span class="glyphicon glyphicon-ok-circle" style="width:50px;"></span>                </h2>
+                        
+                          </div>
+                        
+                          <ul class="container details" >
+                            <li><p><span class="glyphicon glyphicon-user " style="width:50px;"></span> {{re.name}}</p></li>
+                            <li><p><span class="glyphicon glyphicon-envelope one" style="width:50px;"></span>{{re.contact}}</p></li>
+                            <li><p><span class="glyphicon glyphicon-earphone" style="width:50px;"></span>{{re.email}}</p></li>
+                          </ul>
+                        
+                          <div class="col-sm-5 col-xs-6 tital " > <h3> <span class="glyphicon glyphicon-education" style="width:50px;"></span>{{re.specialization}}</h3>
+                            <br>
+                            
+                            <button type = "submit" class = "btn btn-danger lg" (click)="acceptreq(re)">Accept</button>
+                            <button type = "submit" class = "btn btn-danger lg" (click)="rejectreq(re)">Reject</button>
+                          </div><br>
+                          <br>
+                          
+                      </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    
+    </div>
+    
+         <div *ngIf="errormessage!=null">
+            <span style="font-size :20px"class="text-danger">{{errormessage}}</span>
+          </div>
+          <div *ngIf="successmessage!=null">
+            <span  class="text-success" style="font-size:20px">{{successmessage}}</span>
+            
+          </div> 
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> 
+      
+
+
+ </body>
+</html>

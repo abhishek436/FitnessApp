@@ -1,0 +1,25 @@
+
+.btnclass{
+    background-color:black;
+    color:white;
+}
+
+h2{
+    color:whitesmoke;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+div{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
+    line-height: 200%;
+    
+}
+
+.transbox
+{
+     background-color:rgba(248, 244, 244, 0.8); 
+     border-radius: 10px;
+}
